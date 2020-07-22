@@ -8,7 +8,7 @@ class Backer
   end
   
   def back_project(project)
-    @backed_projects << project
-    project.add_backer(self) if !project.backers.include?(self)
+    @backed_projects << project # add passed in project to @backed_projects
+    project.add_backer(self) if !project.backers.include?(self) # add self to project's backers if not already in there
   end
 end
